@@ -3,6 +3,6 @@ Hi , the course is getting started from the neural network ,and how at each neur
 
 Basic terminology :
 a - activation (output or referred as prediction in ML models)
-![refer this for explaination](images/demo.png)
+![refer this for explaination](images/NN_neuron_InputOutput.png)
 
 
