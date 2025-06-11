@@ -13,4 +13,9 @@ Just think about the size of a and w for each layer , it will give some good ins
 
 Though course is starting from TensorFlow like how to build NN with the help of this and all but first we will build with NumPy and come back to this.
 
+## Week 01 :
+
+Lab3: This lab talk about the forward progogation using numpy . so we need to calculate the activatation of each node in each layer , for classification ,sigmoid function is used for activation a= g(np.dot(w,a_pre)+ b), so this si the output of each node ,just be very careful with size of w , this will tell the number of nodes in the current layer and previous layer as well.
+Each column of w represent each vector of each nodes , total columns= total nodes in that layer, since there is dot product between w and a_previous , so each vector size (ie no of rows) will tell ki previous me kitni nodes thi (previous activation layer size is no of nodes in previous layer ) . So how to calculate the correct bias and weights that we will learn later.
+
 
