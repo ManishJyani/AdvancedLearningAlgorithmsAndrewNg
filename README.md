@@ -30,9 +30,11 @@ Each column of w represent each vector of each nodes , total columns= total node
 
 
 ## Week 02:
-Lab 04 : (Relu activation) So NN , chossing correct activation function is very important , for ex classification sigmoid and you can choose separate activation function for each layer. but let say you choose linear activation function for each layer , then it will become simple linear regression problem , there is no point of NN as the end of the day the relation between input and output will look like this :
----------- output = (some combination of weights) * input  + (some combination of weights and  bias) ---------------------
-But ##Relu## is powerful , it can be piecewise non linear ,see the below image
+Lab 01 : (Relu activation) So NN , chossing correct activation function is very important , for ex classification sigmoid and you can choose separate activation function for each layer. but let say you choose linear activation function for each layer , then it will become simple linear regression problem , there is no point of NN as the end of the day the relation between input and output will look like this.
+    ---------- output = (some combination of weights) * input  + (some combination of weights and  bias) ---------------------
+But Relu is powerful , it can be piecewise non linear ,see the below image
 ![](images/RELU_piecewiseNonlinear.png)
 if we look at the right side of the image this will tell you how in different inputs wights contribution can change to zero as function becomes negative leading to activation of that particular node to zero. and this is very powerful , you can see how non-linear output is perfectly fitted with relu as activation but can not be done with linear (no activation so to speak) activation. 
 To be honest before this lab I was doubting RELU , lagg rha tha linear function jaisa hi h :).
+
+Lab 02 : This lab talks about multilabel or multi-classfication problem , for this **Softmax** function is used which is more general form of sigmoid function and for better computation (not rounding off)by tensorflow how last function should be linear not softmax and later change linear output to the probablities using softmax function, for more refer the lab.
