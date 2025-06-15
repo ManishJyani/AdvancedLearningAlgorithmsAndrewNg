@@ -59,3 +59,32 @@ How would you build a decision tree:
 - split the observation based on the selected root node and then further select the node and repeat the same process of splitting the observation based on the decision node until you reach the final classification (leaf node.)
 
 I am pretty sure with above 2 point instructions, we will have no god damn idea how to build a decision tree , I mean I have a lot of questions like:
+- How do I select the root node ?
+- How do I further select the decision node ?
+- How do I know where to stop the decision tree ?
+
+Okay ,let's try to address this questions, but first let's imagine what would be a best or ideal  node or feature we can have with  which we pefectly can classify the observaitons . (for sake let's say cats or no cat's). If we do have such feature we can select that and split the observations into their category (like left side of the node all cats and right side no cats ) and we are done right.
+So I am talking about purity of the classification from that node , more pure the classification is ,better to choose that feature as a node. but the question is how do we quantify the purity of any classification mathmatically ?
+For that let's refer the below image first.
+![](images/EntropyFunction.png)
+How to measure impurity or purity ,answer is **Entropy** function.
+Let's say we have taken a some feature as node classified based upon that (total observation 10, 5 cats , 5 dogs), based on that classfication 6 observation went to left backet and rest 4 went to right bucket.
+In the left side out of 6 , 2 are cats so probabilty (p) for that is 2/6 (second case in picture) and  and Entropy(p=2/6)= 0.92,so if p = 0  (all dogs) or 1 (all cats) Entropy = 0 , so higher the entropy (higher randomness , thermodynamics reference) higher the impurity.
+
+The entropy of a dataset **D** is calculated as:
+
+    H(D) = -∑(p_i * log₂(p_i))
+
+Where:
+- `p_i` is the proportion of class `i` in the dataset
+- The summation is over all classes in present there are only two classes.
+
+But for selecting the decision node , Entropy is not sufficient , we decide it by **Information Gain** 
+![refer this image](images/informationGain.png)
+After selecting the root node , for decision node , we can take every feature can change which feature is giving us the maximum information about the classification , the better that feature is for the classification and we will go ahead with that .
+like in below image , we will go with left most feature for further classfication as it has highest information gain from the previous node.
+![](images/InformationGainExample.png)
+
+Apart from classification , for regression also it can be used. In that case output quality is measured via variance of the each classified subset. Left most classification is most preferable.
+![](images/RegressionTree.png) 
+
