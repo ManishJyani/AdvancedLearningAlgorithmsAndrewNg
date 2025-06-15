@@ -94,3 +94,16 @@ Now let me address the other question where to stop the classfication:
 - information gain from additional split is less than thershold.
 - when number of examples (observation) in a node is below a thershold.
 
+But there is catch , let's you have a dataset and you build a good decision tree for it , but the problem with single decision tree is it is very sensitive to the training data , a single change in the data might lead to complete different tree.
+so single decision tree is not robust to predict the output. So what to do ?
+
+**Trees Ensemble**
+![We can build multiple decision trees](images/TreeEnsembles.png)
+Yes , and take the output in which most of trees predict may be more than 50% I guess, not sure. But the question is ,how to build these multiple trees ?
+By method called **Sampling with replacement** method ,
+Given a dataset of size m,
+For b= 1 to B 
+   - Use sampling with replacement and build a new dataset of size m, one observation can be there multiple time but don't worry abut that. (B = total number of times we have done the sampling). This creation of trees ensemble is called **Bagged decision tree**. (make sure B should not be very large ,it will increase computation burden)
+   - Let's say if you are doing sampling and every time you are not training at all n features of some randomly choosen features then this is called **Random forest**.
+   - But if you improve your sampling process and choose the observation more where decision tree made wrong prediction earlier and build new decision tree keeping those obeserations in mind ,(give weights to observations while choosing ), is called **XGBoost**.
+   - I am pretty sure there are more methods might be available , can check online.
