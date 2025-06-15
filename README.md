@@ -45,7 +45,7 @@ Lab 02 : This lab talks about multilabel or multi-classfication problem , for th
 
 
 # Week04
- This week is all about decesion trees. Let's talk about the theory of it first.
+ This week is all about decision trees. Let's talk about the theory of it first.
 
 ![Refer this image](images/decision_tree.png)
 
@@ -87,4 +87,10 @@ like in below image , we will go with left most feature for further classficatio
 
 Apart from classification , for regression also it can be used. In that case output quality is measured via variance of the each classified subset. Left most classification is most preferable.
 ![](images/RegressionTree.png) 
+
+Now let me address the other question where to stop the classfication:
+- when one node is 100% one class (perfect classfication)
+- when splitting a node will result in exceeding the a maximum depth.
+- information gain from additional split is less than thershold.
+- when number of examples (observation) in a node is below a thershold.
 
