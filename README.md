@@ -38,3 +38,24 @@ if we look at the right side of the image this will tell you how in different in
 To be honest before this lab I was doubting RELU , lagg rha tha linear function jaisa hi h :).
 
 Lab 02 : This lab talks about multilabel or multi-classfication problem , for this **Softmax** function is used which is more general form of sigmoid function and for better computation (not rounding off)by tensorflow how last function should be linear not softmax and later change linear output to the probablities using softmax function, for more refer the lab.
+
+
+# Week 03
+......
+
+
+# Week04
+ This week is all about decesion trees. Let's talk about the theory of it first.
+
+![Refer this image](images/decision_tree.png)
+
+You can see three layers in the image :
+- the top is called root node.
+- the second layer is called decision node.
+- the third in the square where final classification is done is called leaf node.
+
+How would you build a decision tree:
+- start with all the observation at the root node.
+- split the observation based on the selected root node and then further select the node and repeat the same process of splitting the observation based on the decision node until you reach the final classification (leaf node.)
+
+I am pretty sure with above 2 point instructions, we will have no god damn idea how to build a decision tree , I mean I have a lot of questions like:
