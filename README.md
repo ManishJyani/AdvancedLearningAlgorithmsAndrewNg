@@ -41,7 +41,7 @@ Lab 02 : This lab talks about multilabel or multi-classfication problem , for th
 
 
 # Week 03
-......
+This week talks about the practices used to evaluating the model. 
 
 
 # Week04
@@ -98,8 +98,8 @@ But there is catch , let's you have a dataset and you build a good decision tree
 so single decision tree is not robust to predict the output. So what to do ?
 
 **Trees Ensemble**
-![We can build multiple decision trees](images/TreeEnsembles.png)
-Yes , and take the output in which most of trees predict may be more than 50% I guess, not sure. But the question is ,how to build these multiple trees ?
+![](images/TreeEnsembles.png)
+We can build multiple decision trees. Yes , and take the output in which most of trees predict may be more than 50% I guess, not sure. But the question is ,how to build these multiple trees ?
 By method called **Sampling with replacement** method ,
 Given a dataset of size m,
 For b= 1 to B 
